@@ -41,6 +41,12 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Block caret cursor in INSERT mode
+vim.opt.guicursor = ''
+
+-- Preserve background in tmux
+vim.opt.background = 'light'
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -134,7 +140,7 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      -- vim.cmd.colorscheme 'onedark'
     end,
   },
 
@@ -145,7 +151,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
